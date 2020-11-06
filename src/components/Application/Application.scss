@@ -1,0 +1,97 @@
+@import "../../sass/main.scss";
+
+.padding-class {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.application {
+    // margin-top: 50px;
+    background-image: url("../../img/application/backapp.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    padding: 80px 0;
+
+    .application-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .application-left {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+
+            .para-1 {
+                @include textStyle($fs-4, $fw-bold-0, $c-white-0);
+                margin: 0;
+            }
+
+            .para-1:nth-child(2) {
+                margin-bottom: $mg-2;
+            }
+
+            .para-2 {
+                @include textStyle($fs-0 + 3, $fw-normal, $c-white-0);
+                margin: 0;
+            }
+
+            .para-3 {
+                @include textStyle($fs-0, $fw-normal, $c-white-0);
+
+                span {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+
+            .btn-orange {
+                padding: 10px 20px;
+                border-radius: $border-radius;
+                @include textStyle($fs-0 + 3, $fw-bold, $c-white-0);
+                margin: $mg-2 + 3 0 $mg-2 0;
+            }
+        }
+
+        .application-right {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 100%;
+            }
+
+            .application-background {
+                background-image: url("../../img//application/mobile.png");
+                width: 200px;
+                height: 422px;
+                background-size: cover;
+                position: relative;
+                overflow: hidden;
+                @include respond(large) {
+                    width: 350px;
+                    height: 739px;
+                }
+            }
+
+            .application-item {
+                margin-top: 10px;
+                width: 93%;
+                overflow: hidden;
+                border-radius: 20px;
+                z-index: 1;
+                @include respond(large) {
+                    border-radius: 40px;
+                    height: 710px;
+                    margin-left: 10px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    .mUZZN {
+        margin: 0!important;
+    }
+}

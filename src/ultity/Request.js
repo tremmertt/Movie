@@ -1,6 +1,6 @@
 import axios from "axios";
 import { TOKEN } from "./ConfigWeb";
-export const callApi = (url = "", mathod = "", data = {}) => {
+export const callApi = (url = "", method = "", data = {}) => {
   const config = {};
   const token = localStorage.getItem(TOKEN);
   if (token) {
