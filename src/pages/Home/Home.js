@@ -5,6 +5,7 @@ import { connect, useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import DemoHOC from "../HOC/DemoHOC";
 import Application from "../../components/Application/Application";
+import CarouselMovie from "../../components/CarouselMovie/CarouselMovie";
 export default function Home(props) {
   const danhSachPhim = useSelector((state) => state.QuanLyPhimReducer.dsPhim);
 
@@ -15,7 +16,6 @@ export default function Home(props) {
   }, []);
 
   const renderPhim = () => {
-    console.log("dsPhim", danhSachPhim);
     return danhSachPhim.map((phim, index) => {
       return (
         <div className="col-4" key={index}>
@@ -46,9 +46,10 @@ export default function Home(props) {
   };
   return (
     <>
-      <div className="container">
+      <CarouselMovie />
+      {/* <div className="container">
         <div className="row">{renderPhim()}</div>
-      </div>
+      </div> */}
 
       <Application />
     </>

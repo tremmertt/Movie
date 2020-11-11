@@ -56,7 +56,7 @@ export default function Footer() {
             </div>
             <div className="col-lg-4 col-sm-6 footer-bottom">
               <div className="container">
-                <h3>ĐỐC TÁC</h3>
+                <h3>ĐỐI TÁC</h3>
                 <div className="row footer-bottom_brand">
                   <div className="col footer-bottom_item">
                     <img src={cgv} alt />

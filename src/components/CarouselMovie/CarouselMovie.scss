@@ -1,0 +1,124 @@
+@import "../../sass/main.scss";
+
+.carousel {
+    position: relative;
+
+    .carousel-control-prev-icon {
+        background-image: url('../../img/back-session.png')!important;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 5%;
+    }
+
+    .carousel-control-next-icon {
+        background-image: url('../../img/next-session.png')!important;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 5%;
+    }
+
+    @include respond("extra-large") {
+        .play-button {
+            position: absolute;
+            top: 35%;
+            left: 47%
+        }
+
+    }
+
+    @include respond("medium") {
+        .play-button {
+            position: absolute;
+            top: 35%;
+            left: 45%
+        }
+
+        #carouselExampleIndicators {
+            .carousel-indicators {
+                position: absolute;
+                bottom: 20px;
+            }
+        }
+
+    }
+
+    @include respond("small") {
+        .carousel {
+            display: none;
+        }
+    }
+}
+.ticket {
+    .ticket-content {
+        height: 80px;
+        background-color: $c-white-0;
+        width: 60%;
+        position: absolute;
+        bottom: -5%;
+        left: 20%;
+        border-radius: $border-radius;
+        @include boxShadow;
+
+        .ticket-list {
+            padding: $pd-1;
+            height: 100%;
+
+            span {
+                flex: 1;
+            }
+
+            .ticket-item {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                @include textStyle($fs-0, $fw-normal, $c-black-0);
+                justify-content: space-around;
+            }
+
+            .ticket-item::after {
+                content: "";
+                width: 1px;
+                height: 30px;
+                background-color: $c-gray-4;
+                margin-left: $mg-1;
+            }
+
+            .ticket-btn {
+                background-color: $c-gray-2;
+                border-radius: $border-radius;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 70%;
+                cursor: pointer;
+                @include textStyle($fs-0, $fw-normal, $c-white-0);
+                margin-top: $mg-1;
+            }
+        }
+
+    }
+
+    @include respond("extra-large") {
+        .ticket-content {
+            width: 86% !important;
+
+            position: absolute;
+            bottom: -7%;
+            left: 7%;
+        }
+    }
+
+    @include respond("medium") {
+        .ticket-content {
+            display: none;
+        }
+    }
+
+    @include respond("extra-small") {
+        .ticket-content {
+            display: none;
+        }
+    }
+}
