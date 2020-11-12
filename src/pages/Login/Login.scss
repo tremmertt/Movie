@@ -1,0 +1,15 @@
+@import "../../sass/main.scss";
+
+.dangNhap {
+    background-image: url("../../img/login/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+.container {
+    display: inline-block;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px;
+}

@@ -44,10 +44,10 @@ export default function Header() {
         <div className="collapse navbar-collapse menu__right">
           <ul className="navbar-nav ml-auto w-30">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="/login">
                 <img src={tixUser} className="avatar_header" alt />
                 Đăng nhập
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
               <img className="icon_location" src={tixLocation} alt />

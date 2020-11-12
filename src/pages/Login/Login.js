@@ -1,69 +1,30 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { dangNhapApiAction } from "../../redux/actions/QuanLyNguoiDungAction";
-import { useHistory } from "react-router-dom";
-//
+import React from 'react'
+import "./Login.scss";
+import { NavLink } from "react-router-dom"
 
-export default function Login(props) {
-  let dispatch = useDispatch();
-  let history = useHistory();
-  /*
-     this.state = {
-         userLogin: {
-             userName:'',
-             passWord:''
-         }
-     }
-     */
-  // const [state, setState] = useState({
-  //     userLogin: {
-  //         userName: '',
-  //         passWord: ''
-  //     }
-  // });
-  const [userLogin, setUserLogin] = useState({
-    userName: "",
-    passWord: "",
-  });
-
-  const handleChange = (e) => {
-    const { value, name } = e.target;
-    setUserLogin({
-      ...userLogin,
-      [name]: value,
-    });
-  };
-
-  const login = (e) => {
-    e.preventDefault();
-    //Gọi api đăng nhập
-    dispatch(dangNhapApiAction(userLogin, history));
-  };
-
+export default function Login() {
   return (
-    <form className="container" onSubmit={login}>
-      <h3 className="display-4 text-center">Login</h3>
-      <div className="form-group">
-        <p>userName</p>
-        <input
-          name="userName"
-          className="form-control"
-          onChange={handleChange}
-        />
-      </div>
-      <div className="form-group">
-        <p>passWord</p>
-        <input
-          name="passWord"
-          className="form-control"
-          onChange={handleChange}
-        />
-      </div>
-      <div className="form-group">
-        <button className="btn btn-success" type="submit">
-          Login
-        </button>
-      </div>
-    </form>
-  );
+    <div className="dangNhap row">
+      <div className="col-3"></div>
+      <form className="container col-6">
+        <h3 className="display-4 text-center">Đăng Nhập </h3>
+        <div className="form-group">
+          <p> Tài Khoản </p>
+          <input name="userName" className="form-control"/>
+        </div>
+        <div className="form-group">
+          <p>  Mật Khẩu </p>
+          <input name="passWord" className="form-control"/>
+        </div>
+        <div className="form-group">
+          <button className="btn btn-success " type="submit"> Đăng Nhập </button>
+        </div>
+        <div className="form-group">
+          <p> Bạn chưa có tài khoản ? <NavLink to="/signup"> Đăng Ký </NavLink> </p>
+        </div>
+      </form>
+      <div className="col-3"></div>
+    </div>
+  )
 }
+
