@@ -15,6 +15,7 @@ import { AdminTemplate } from './templates/AdminTemplate';
 import FilmsManager from './pages/Admin/FilmsManager.js/FilmsManager';
 import UserManager from './pages/Admin/UsersManager/UserManager';
 import Booking from './pages/Booking/Booking';
+import SignUp from './pages/SignUp/SignUp';
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +27,7 @@ function App() {
         <HomeTemplate exact path='/about' Component={About} />
         <HomeTemplate exact path='/hoc' Component={DemoHOC} />
         <HomeTemplate exact path='/login' Component={Login} />
+        <HomeTemplate exact path='/signup' Component={SignUp} />
         <HomeTemplate exact path='/detail/:id' Component={Detail} />
         <HomeTemplate exact path='/profile' Component={Profile} />
         <HomeTemplate exact path='/trangchu' Component={TrangChu} />
