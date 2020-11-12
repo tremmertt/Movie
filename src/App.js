@@ -8,7 +8,6 @@ import Login from "./pages/Login/Login";
 import Detail from "./pages/Detail/Detail";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import Profile from "./pages/Profile/Profile";
-import TrangChu from "./pages/TrangChu/TrangChu";
 import { HomeTemplate } from "./templates/HomeTemplate";
 import DemoHOC from "./pages/HOC/DemoHOC";
 import { AdminTemplate } from "./templates/AdminTemplate";
@@ -29,7 +28,6 @@ function App() {
         <Route exact path="/signup" component={SignUp} />
         <HomeTemplate exact path="/detail/:id" component={Detail} />
         <HomeTemplate exact path="/profile" Component={Profile} />
-        <HomeTemplate exact path="/trangchu" Component={TrangChu} />
         <AdminTemplate exact path="/admin/films" Component={FilmsManager} />
         <AdminTemplate exact path="/admin/users" Component={UserManager} />
         <Route

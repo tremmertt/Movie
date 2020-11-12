@@ -8,19 +8,30 @@ import Application from "../../components/Application/Application";
 import CarouselMovie from "../../components/CarouselMovie/CarouselMovie";
 import Showtime from "../../components/Showtime/Showtime";
 import News from "../../components/News/News";
+import Loading from "../../components/Loading/Loading";
 export default function Home(props) {
   const dispatch = useDispatch();
+  const [done, setdone] = useState(undefined);
 
   useEffect(() => {
-    dispatch(layDanhSachPhimApiAction());
-  }, []);
+    setTimeout(() => {
+      setdone(true);
+      dispatch(layDanhSachPhimApiAction());
+    }, 1800);
+  }, [done]);
 
   return (
     <>
-      <CarouselMovie />
-      <Showtime />
-      <News />
-      <Application />
+      {!done ? (
+        <Loading />
+      ) : (
+        <>
+          <CarouselMovie />
+          <Showtime />
+          <News />
+          <Application />
+        </>
+      )}
     </>
   );
 }
