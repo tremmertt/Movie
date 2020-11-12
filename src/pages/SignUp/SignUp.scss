@@ -1,8 +1,63 @@
 @import "../../sass/main.scss";
 
-.dangKy {
-    background-image: url("../../img/login/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 1500px;
+@import "../../sass/main.scss";
+
+.login {
+  background: url("../../img/login/bg2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: fixed;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .signUp-form {
+      position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    height: 800px;
+    background-color: rgba($color: rgba(255, 255, 255, 0), $alpha: 1);
+    border-radius: 30px;
+    form {
+        width: 350px;
+        height: 600px;
+    }
+    h3 {
+        color: $c-gray-5;
+    }
+    .btnSignUp {
+        padding: 12px;
+        color: white;
+        font-weight: bold;
+        background-color: #4c6ef4;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+    }
+    .formSignUp {
+        padding: 12px;  
+        border: none;
+        background-color: #f2f3f5;
+        border-radius: 15px;
+        &:active {
+            border: none;
+        }
+    }
+  }
+  .btnClose {
+      position: absolute;
+      top: 3%;
+      right: 5%;
+      color: $c-gray-5;
+      font-size: $fs-3;
+  }
 }
