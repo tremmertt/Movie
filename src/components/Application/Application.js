@@ -13,7 +13,7 @@ import slide9 from "../../img/application/slide9.jpg";
 
 export default function Application() {
   return (
-    <section className="application" id="application">
+    <section className="application mt-4" id="application">
       <div className="padding-class application-list row">
         <div className="col-12 col-lg-6 application-left text-center text-lg-left">
           <div className="application-left_item">
